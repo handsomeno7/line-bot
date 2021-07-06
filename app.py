@@ -32,14 +32,21 @@ def callback():
         print("Invalid signature. Please check your channel access token/channel secret.")
         abort(400)
 
-    return 'OK'
+    return 'OK's
 
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    msg = event.message.text
+    r = '我看不懂你在公三小'
+
+    if msg == 'hi':
+        r = '您好'
+    elif msg == 'hello'
+        r = 'Yo man'
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
