@@ -42,7 +42,7 @@ def handle_message(event):
 
     if msg == 'hi':
         r = '您好'
-    elif msg == 'hello'
+    elif msg == 'hello':
         r = 'Yo man'
     line_bot_api.reply_message(
         event.reply_token,
